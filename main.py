@@ -5,6 +5,13 @@ from pdfminer.pdfparser import PDFParser
 from pdfminer.pdfdocument import PDFDocument
 from hashlib import sha1
 
+def file_delete():
+    # to-do
+    pass
+
+def etc():
+    print("no")
+
 if not os.path.isdir("backups"):
     os.mkdir("backups")
 
