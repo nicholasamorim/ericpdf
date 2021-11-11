@@ -61,12 +61,7 @@ for pdf_file in all_filenames:
     print("Reading", pdf_file)    
     parser = PDFParser(contents)
     doc = PDFDocument(parser)
-    # print(doc.info)  # The "Info" metadata
     metadata = doc.info[0]
     date = metadata["CreationDate"]
     date = date.split(b"+")[0]
     date_obj = datetime.datetime.strptime(date.decode(), "D:%Y%m%d%H%M%S")
-    print(date_obj)
-    print(date_obj.year)
-    print(dir(date_obj))
-    break
